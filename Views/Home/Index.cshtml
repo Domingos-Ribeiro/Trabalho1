@@ -1,0 +1,75 @@
+﻿
+@*@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>*@
+
+@{ 
+    Layout = null;
+}
+
+<!DOCTYP html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        th {
+            background-color:burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Valores obtidos do HomeController via ViewData</h2>
+
+        <br />
+        <div>
+          
+            <table style="width:30%">
+                <caption><h3>INFORMAÇÕES PESSOAIS</h3></caption>
+
+                <br />
+                <tr>
+                    <th>Tipo</th>
+                    <th>Dados Gerais</th>
+                </tr>
+
+                <tr>
+                    <td><b>Nome:</b> </td>
+                    <td> @ViewData["Nome"]</td>
+                </tr>
+
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td>@ViewData["Email"]</td>
+                </tr>
+
+                <tr>
+                    <td><b>Curso: </b></td>
+                    <td>@ViewData["Curso"]</td>
+                </tr>
+
+                <tr>
+                    <td><b>Data: </b></td>
+                    <td>@ViewData["DataInicio"]</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>
