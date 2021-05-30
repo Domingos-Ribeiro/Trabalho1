@@ -27,5 +27,10 @@ namespace Trabalho1.Controllers
 
             return View(cliente);
         }
+
+        public ActionResult SalvarCliente()
+        {
+            return View();
+        }
     }
 }
