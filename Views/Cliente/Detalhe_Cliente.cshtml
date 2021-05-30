@@ -1,0 +1,40 @@
+﻿@model Trabalho1.Models.Cliente
+
+@{
+    ViewBag.Title = "Detalhe_Cliente";
+
+    Layout = null;
+}
+
+<h2>Detalhe_Cliente</h2>
+
+<fieldset>
+    <legend>Cliente</legend>
+
+    @*Exemplo do uso do ViewBag para chamar os dados do cliente controller.*@
+    @*<b>@ViewBag.ClienteId</b>
+    <b>@ViewBag.Nome</b>*@
+
+
+    <div><label for="ClienteId">Id</label></div>
+    <div>
+        <input type="text" value="@Model.ClienteId" id="ClienteId" name="ClienteId" />
+    </div>
+
+    <div><label for="Nome">Nome</label></div>
+    <div>
+        <input type="text" value="@Model.Nome" id="Nome" name="Nome" />
+    </div>
+
+    <div><label for="Email">Email</label></div>
+    <div>
+        <input type="text" value="@Model.Email" id="Email" name="Email" />
+    </div>
+
+    <div><label for="Telefone">Telefone</label></div>
+    <div>
+        <input type="text" value="@Model.Telefone" id="Telefone" name="Telefone" />
+    </div>
+
+
+</fieldset>
