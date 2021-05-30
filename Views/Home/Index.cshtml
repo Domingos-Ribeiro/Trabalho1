@@ -34,18 +34,22 @@
 </head>
 <body>
     <div>
-        <h2>Valores obtidos do HomeController via ViewData</h2>
+
+
+        @*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  ViewData  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*@
+        @* <h2>Usando o ViewData - Em cima, no endereço,  NÃO APARECE o caminho desta Página!</h2>
 
         <br />
+
+
         <div>
-          
             <table style="width:30%">
                 <caption><h3>INFORMAÇÕES PESSOAIS</h3></caption>
 
                 <br />
                 <tr>
                     <th>Tipo</th>
-                    <th>Dados Gerais</th>
+                    <th>Dados Gerais Usando O ViewData</th>
                 </tr>
 
                 <tr>
@@ -69,7 +73,47 @@
                 </tr>
 
             </table>
+        </div>*@
+
+        @*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  ViewBag  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*@
+
+        <h2>Usando o ViewBag - Em cima, no endereço, APARECE o caminho desta Página!</h2>
+        <p><b>Se o endereço for copiado e colado no mesmo ou outro navegador, o acesso SERÁ </b>PERMITIDO.</p>
+
+        <br />
+        <div>
+            <table style="width:30%">
+                <caption><h3>INFORMAÇÕES PESSOAIS</h3></caption>
+
+                <br />
+                <tr>
+                    <th>Tipo</th>
+                    <th>Dados Gerais Usando o ViewBag</th>
+                </tr>
+
+                <tr>
+                    <td><b>Nome:</b> </td>
+                    <td> @ViewBag.Nome</td>
+                </tr>
+
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td>@ViewBag.Email</td>
+                </tr>
+
+                <tr>
+                    <td><b>Curso: </b></td>
+                    <td>@ViewBag.Curso</td>
+                </tr>
+
+                <tr>
+                    <td><b>Data: </b></td>
+                    <td>@ViewBag.DataInicio</td>
+                </tr>
+
+            </table>
         </div>
+
     </div>
 </body>
 </html>
